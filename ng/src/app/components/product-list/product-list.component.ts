@@ -14,7 +14,6 @@ export class ProductListComponent implements OnInit {
   constructor(private sanity: SanityService) { }
   products: Product[];
   ngOnInit(): void {
-    const query = `*[_type == 'product']{ name, _id, description, price, 'imageUrl': image.asset->url }`;
     this.sanity
       .getProductList()
       .subscribe(data => {
