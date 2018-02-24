@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  sanityUrl: `https://854z9uae.apicdn.sanity.io/v1/data/query/`
 };
