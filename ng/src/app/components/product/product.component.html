@@ -1,5 +1,6 @@
 <a routerLink="/">BACK</a>
 <article *ngIf='product'>
   <img src="{{ product.imageUrl }}" height="400" />
-  <p>{{ product.name }}</p>
+  <h2>{{ product.name }}</h2>
+  <p>{{ product.description }}</p>
 </article>
