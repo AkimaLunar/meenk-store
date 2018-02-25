@@ -1,0 +1,104 @@
+@import './buttons';
+@import './text-inputs';
+@import './grid';
+@import './typography';
+
+// Typography
+
+// Montserrat 400, 700
+// PT Serif 400, 400italic, 700
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|Merriweather:300,300italic,700);
+$base-font-family: 'Merriweather', serif;
+$heading-font-family: 'Montserrat', sans-serif;
+
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+
+// Font Sizes
+$base-font-size: 1em;
+
+// Line height
+$base-line-height: 1.5;
+$heading-line-height: 1.2;
+
+// Other Sizes
+$base-border-radius: 2px;
+$base-spacing: $base-line-height * 1em;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0;
+
+// Colors
+
+// Theme Colors
+$white       : transparentize(white,.2);
+$robin       : #8FCCCC;
+$wine        : #5B4653;
+$mustard     : #DDC045;
+
+$accent-colors: (
+  primary    : $robin,
+  secondary  : $mustard,
+  dark       : $wine,
+  light      : #CFE5E4
+);
+
+$color-primary   : map-get($accent-colors, primary);
+$color-secondary : map-get($accent-colors, secondary);
+$color-dark      : map-get($accent-colors, dark);
+$color-light     : map-get($accent-colors, light);
+
+// UI Colors
+$vista       : #79D1AD;
+$mandy       : #e67478;
+$apricot     : #ed8864;
+$eastside    : #9279c3;
+
+$ui-colors: (
+  default   : $robin ,
+  success   : $robin,
+  error     : $mandy,
+  warning   : $apricot,
+  info      : $eastside
+);
+
+// Greys
+$gray-colors: (
+  x-light   : #EEEDF2,
+  light     : #C4C2CC,
+  medium    : #8E8C99,
+  dark      : #525059,
+  x-dark    : #232326
+);
+$dark-gray  : map-get($gray-colors, dark);
+$medium-gray: map-get($gray-colors, medium);
+$light-gray : map-get($gray-colors, light);
+
+// Brand Colors
+$color-twitter  : #00aced;
+$color-facebook : #3b5998;
+
+$brand-colors: (
+  twitter   : $color-twitter,
+  facebook  : $color-facebook
+);
+
+// Font Colors
+$base-font-color: $dark-gray;
+$action-color: map-get($accent-colors, primary);
+
+// Border
+$base-border-color: map-get($gray-colors, x-light);;
+$base-border: 1px solid $base-border-color;
+
+// Background Colors
+$base-background-color: #fff;
+$secondary-background-color: tint($base-border-color, 75%);
+
+// Forms
+$form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
+
+// Animations
+$base-duration: 150ms;
+$base-timing: ease;
+
