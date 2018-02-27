@@ -1,0 +1,22 @@
+@import '../../styles/variables/variables';
+@import '../../styles/helpers/helpers';
+
+.footer {
+  $background: #e6e8ed;
+
+  margin-top: 2rem;
+  height: 10rem;
+
+  background: $background;
+  
+  &__inner {
+    @extend %container;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    p {
+      max-width: 75%;
+    }
+  }
+}

@@ -1,8 +1,16 @@
 <ul class="product-list">
+  <!-- <li class="product-item product-item--special">
+    <a routerLink="product/{{ products[0]._id }}">
+      <img src="{{ products[0].imageUrl }}?h=300&w=600&fit=crop&crop=center" />
+      <h3 class="product-item__title">{{ products[0].name }}</h3>
+      <button class="button">&#x24;{{products[0].price}}&ensp;|&ensp; Buy</button>
+    </a>
+  </li> -->
   <li *ngFor="let product of products" class="product-item">
     <a routerLink="product/{{ product._id }}">
-      <img src="{{ product.imageUrl }}" />
-      <p>{{ product.name }}</p>
+      <img src="{{ product.imageUrl }}?h=300&w=300&fit=crop&crop=center" />
+      <h3 class="product-item__title">{{ product.name }}</h3>
+      <button class="button">&#x24;{{product.price}}&ensp;|&ensp; Buy</button>
     </a>
   </li>
 </ul>

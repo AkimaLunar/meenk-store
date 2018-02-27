@@ -1,0 +1,6 @@
+@import './styles/variables/variables';
+@import './styles/helpers/helpers';
+
+.app-main {
+  @extend %container;
+}

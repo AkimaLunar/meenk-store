@@ -1,4 +1,8 @@
 %container {
   max-width: $large-screen;
   margin: 0 auto;
+  @media screen and (max-width: $large-screen) {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  };
 }

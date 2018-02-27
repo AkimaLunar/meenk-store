@@ -7,15 +7,15 @@
 
 // Montserrat 400, 700
 // PT Serif 400, 400italic, 700
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|Merriweather:300,300italic,700);
-$base-font-family: 'Merriweather', serif;
-$heading-font-family: 'Montserrat', sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Lora|Open+Sans:400,700');
+$base-font-family: 'Open Sans', sans-serif;
+$heading-font-family: 'Lora', serif;
 
 $font-weight-regular: 400;
 $font-weight-bold: 700;
 
 // Font Sizes
-$base-font-size: 1em;
+$base-font-size: 1.25em;
 
 // Line height
 $base-line-height: 1.5;
@@ -31,15 +31,15 @@ $base-z-index: 0;
 
 // Theme Colors
 $white       : transparentize(white,.2);
-$robin       : #8FCCCC;
-$wine        : #5B4653;
-$mustard     : #DDC045;
+$robin       : #8fb2cc;
+$wine        : #2f213f;
+$pink        : #ff609d;
 
 $accent-colors: (
   primary    : $robin,
-  secondary  : $mustard,
+  secondary  : $pink,
   dark       : $wine,
-  light      : #CFE5E4
+  light      : $white,
 );
 
 $color-primary   : map-get($accent-colors, primary);
@@ -63,15 +63,17 @@ $ui-colors: (
 
 // Greys
 $gray-colors: (
-  x-light   : #EEEDF2,
+  x-light   : #E6E8ED,
   light     : #C4C2CC,
   medium    : #8E8C99,
   dark      : #525059,
   x-dark    : #232326
 );
-$dark-gray  : map-get($gray-colors, dark);
-$medium-gray: map-get($gray-colors, medium);
-$light-gray : map-get($gray-colors, light);
+$x-dark-gray  : map-get($gray-colors, x-dark);
+$dark-gray    : map-get($gray-colors, dark);
+$medium-gray  : map-get($gray-colors, medium);
+$light-gray   : map-get($gray-colors, light);
+$x-light-gray : map-get($gray-colors, x-light);
 
 // Brand Colors
 $color-twitter  : #00aced;
@@ -89,6 +91,7 @@ $action-color: map-get($accent-colors, primary);
 // Border
 $base-border-color: map-get($gray-colors, x-light);;
 $base-border: 1px solid $base-border-color;
+$base-box-shadow: 0 6px 22px rgba($x-dark-gray, 0.35);
 
 // Background Colors
 $base-background-color: #fff;

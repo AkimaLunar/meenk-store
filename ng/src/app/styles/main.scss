@@ -1,7 +1,10 @@
 @import './variables/variables';
 @import './base/base';
 @import './helpers/helpers';
+@import './modules/modules';
 
 html {
   height: 100%;
+  background: lighten($x-light-gray, 5%);
+
 }

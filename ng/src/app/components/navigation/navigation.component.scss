@@ -1,0 +1,75 @@
+@import '../../styles/variables/variables';
+@import '../../styles/base/base';
+@import '../../styles/helpers/helpers';
+
+.navigation {
+  $gradient-1: #614385;
+  $gradient-2: #516395;
+  $gradient-3: #E29587;
+
+  margin-bottom: 2rem;
+  height: 10rem;
+  color: #ffffff;
+  background: $gradient-1;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(25deg, $gradient-2, $gradient-1);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(25deg, $gradient-2, $gradient-1); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+  &__inner {
+    @extend %container;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    align-content: space-between;
+
+    &--left,
+    &--right {
+      display: inline-block;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    &--left {
+      text-align: center;
+      @media screen and (min-width: $medium-screen) {
+        text-align: left;
+        width: 35%;
+        justify-content: center;
+      }
+    }
+    &--right {
+      text-align: center;
+      @media screen and (min-width: $medium-screen) {
+        text-align: right;
+        margin-left: 2rem;
+        width: 65%;
+        justify-content: space-between;
+      }
+    }
+  }
+  &__logo {
+    color: white;
+    font-size:2rem;
+    line-height: .5;
+    margin-bottom: 1rem;
+  }
+  &__description {
+    margin-bottom: 0;
+    font-size: .85rem;
+    color: transparentize($color: #ffffff, $amount: .25)
+  }
+  &__user {
+    padding: 1rem 0;
+    text-align: right;
+  }
+  &__list {
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item {
+    font-size: .85rem;
+    text-transform: uppercase;
+    font-weight: $font-weight-bold;
+    letter-spacing: 2px;
+  }
+}

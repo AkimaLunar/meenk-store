@@ -1,15 +1,33 @@
 @import '../../styles/variables/variables';
-@import '../../styles/helpers/helpers';
 
 .product-list {
-  @extend %container;
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
-  grid-auto-rows: minmax(10rem,auto);
+  grid-auto-rows: 22.75rem;
 
 }
 
 .product-item {
   display: inline-block;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: $base-box-shadow;
+  background: #ffffff;
+  position: relative;
+  &--special {
+    grid-column: span 2;
+  }
+  &__title {
+    margin: .5rem 1rem;
+    margin-bottom: 5rem;
+    color: $color-dark;
+  }
+
+  button {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    border-radius: 0;
+  }
 }

@@ -5,5 +5,6 @@
 
 export const environment = {
   production: false,
-  sanityUrl: `https://854z9uae.apicdn.sanity.io/v1/data/query/`
+  sanityUrl: `https://854z9uae.apicdn.sanity.io/v1/data/query/`,
+  moltenClientId: `N9RWTk0EZxiFHarS4zMwWSaHUe9eymPAdJORp60kOB`
 };
